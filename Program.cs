@@ -14,6 +14,12 @@ namespace UchebProgramm
 
         static void Main(string[] args)
         {
+            if (args.Length == 1 && args[0] == "--help")
+            {
+                Console.WriteLine("Использование: dotnet run -- число1 число2 ...");
+                Console.WriteLine("Вычисляет сумму, среднее арифметическое, минимум и максимум");
+                return;
+            }
             if (args.Length == 0)
             {
                 Console.WriteLine("Вы не указали числа! Пожалуйста, укажите их!");
